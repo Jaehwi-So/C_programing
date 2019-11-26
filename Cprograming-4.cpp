@@ -1,5 +1,5 @@
-#include<stdio.h>
-//ÇÔ¼ö Æ÷ÀÎÅÍ
+ï»¿#include<stdio.h>
+//í•¨ìˆ˜ í¬ì¸í„°
 void Function1(int n1, int n2){
 
 	printf("%d + %d = %d \n", n1,n2,n1+n2);
@@ -14,27 +14,27 @@ void Function2(char *str){
 int main(){
 	int num1=10; 
 	int num2=20;
-	char *str="Jaehwi So";      //strÆ÷ÀÎÅÍ ¼±¾ð, str ÁÖ¼Ò°ª ³»¿¡ ¹®ÀÚ¿­ ÇÒ´ç
+	char *str="Jaehwi So";      //strí¬ì¸í„° ì„ ì–¸, str ì£¼ì†Œê°’ ë‚´ì— ë¬¸ìžì—´ í• ë‹¹
 	Function1(num1,num2);
 
-	void (*Pfunc)(int, int);    //ÇÔ¼ö Æ÷ÀÎÅÍ PfuncÀÇ ¼±¾ð
-	//ÇÔ¼öÀÇ ÀÚ·áÇü(*(Æ÷ÀÎÅÍ ÀÌ¸§))(¸Å°³º¯¼öÀÇ ÀÚ·áÇü)
-	Pfunc=Function1; //ÇÔ¼öÀÇ ÀÌ¸§Àº ÁÖ¼Ò°ªÀ» ÀÇ¹ÌÇÑ´Ù.
-	Pfunc(num1,num2); //Pfunc¿Í Function¿¡´Â µ¿ÀÏÇÑ °ªÀÌ ÀúÀåµÈ´Ù. º¯¼ö³Ä »ó¼ö³Ä°¡ µÑÀÇ Â÷ÀÌ PfuncÀ» Function1Ã³·³ »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+	void (*Pfunc)(int, int);    //í•¨ìˆ˜ í¬ì¸í„° Pfuncì˜ ì„ ì–¸
+	//í•¨ìˆ˜ì˜ ìžë£Œí˜•(*(í¬ì¸í„° ì´ë¦„))(ë§¤ê°œë³€ìˆ˜ì˜ ìžë£Œí˜•)
+	Pfunc=Function1; //í•¨ìˆ˜ì˜ ì´ë¦„ì€ ì£¼ì†Œê°’ì„ ì˜ë¯¸í•œë‹¤.
+	Pfunc(num1,num2); //Pfuncì™€ Functionì—ëŠ” ë™ì¼í•œ ê°’ì´ ì €ìž¥ëœë‹¤. ë³€ìˆ˜ëƒ ìƒìˆ˜ëƒê°€ ë‘˜ì˜ ì°¨ì´ Pfuncì„ Function1ì²˜ëŸ¼ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤.
 
 
-	Function2(str); //Æ÷ÀÎÅÍ º¯¼ö str¿¡´Â ¹®ÀÚ¿­ÀÇ Ã¹±ÛÀÚÀÎ HÀÇ ÁÖ¼Ò°ªÀÌ ÀúÀåµÇ¸ç strÀÌ °¡¸®Å°´Â ´ë»óÀº Hello World.
-	//¹®ÀÚ¿­ÀÌ ¸Þ¸ð¸® °ø°£¿¡ ÀúÀå->¸Þ¸ð¸®ÀÇ ÁÖ¼Ò°ª ¹ÝÈ¯ //printfÇÔ¼ö´Â ¹®ÀÚ¿­ÀÇ ÁÖ¼Ò°ªÀ» Àü´Þ¹Þ´Â ÇÔ¼öÀÌ´Ù.
-	void (*Pfunc2)(char*)=Function2;   //ÇÔ¼ö Æ÷ÀÎÅÍ Pfunc2ÀÇ ¼±¾ð. ¸Å°³º¯¼ö´Â Æ÷ÀÎÅÍÀÌ¹Ç·Î char*
+	Function2(str); //í¬ì¸í„° ë³€ìˆ˜ strì—ëŠ” ë¬¸ìžì—´ì˜ ì²«ê¸€ìžì¸ Hì˜ ì£¼ì†Œê°’ì´ ì €ìž¥ë˜ë©° strì´ ê°€ë¦¬í‚¤ëŠ” ëŒ€ìƒì€ Hello World.
+	//ë¬¸ìžì—´ì´ ë©”ëª¨ë¦¬ ê³µê°„ì— ì €ìž¥->ë©”ëª¨ë¦¬ì˜ ì£¼ì†Œê°’ ë°˜í™˜ //printfí•¨ìˆ˜ëŠ” ë¬¸ìžì—´ì˜ ì£¼ì†Œê°’ì„ ì „ë‹¬ë°›ëŠ” í•¨ìˆ˜ì´ë‹¤.
+	void (*Pfunc2)(char*)=Function2;   //í•¨ìˆ˜ í¬ì¸í„° Pfunc2ì˜ ì„ ì–¸. ë§¤ê°œë³€ìˆ˜ëŠ” í¬ì¸í„°ì´ë¯€ë¡œ char*
 	Pfunc2(str);
 	
 
-	//ÇÔ¼ö Æ÷ÀÎÅÍ´Â ¿Ö ¾²´ÂÁö´Â ÇÐÀÚµéÀÇ ÀÇ°ßÀÌ ºÐºÐÇÏ´Ù°í ÇÏ´Ù.
+	//í•¨ìˆ˜ í¬ì¸í„°ëŠ” ì™œ ì“°ëŠ”ì§€ëŠ” í•™ìžë“¤ì˜ ì˜ê²¬ì´ ë¶„ë¶„í•˜ë‹¤ê³  í•˜ë‹¤.
 
 	//*****************************************************************
 
 	int num3=10;
-	void *ptr;     //voidÇü Æ÷ÀÎÅÍ º¯¼öÀÇ ¼±¾ð, voidÇü Æ÷ÀÎÅÍ¿¡´Â ¾î¶°ÇÑ º¯¼öÀÇ ÁÖ¼Ò°ªÀÌµç ´ãÀ» ¼ö ÀÖ´Ù.
+	void *ptr;     //voidí˜• í¬ì¸í„° ë³€ìˆ˜ì˜ ì„ ì–¸, voidí˜• í¬ì¸í„°ì—ëŠ” ì–´ë– í•œ ë³€ìˆ˜ì˜ ì£¼ì†Œê°’ì´ë“  ë‹´ì„ ìˆ˜ ìžˆë‹¤.
 	ptr=&num3;
 	printf("%p \n", ptr);
 	ptr=Function1;
