@@ -1,19 +1,19 @@
-#include<stdio.h>
-//¹è¿­°ú Æ÷ÀÎÅÍ ½ÉÈ­
+ï»¿#include<stdio.h>
+//ë°°ì—´ê³¼ í¬ì¸í„° ì‹¬í™”
 //*************************************************************
-//1¹ø ÇÔ¼ö
-//ÀÌÂ÷¿ø ¹è¿­           
+//1ë²ˆ í•¨ìˆ˜
+//ì´ì°¨ì› ë°°ì—´           
 void twomultiarray(){                                                 
-	int array1[2][3]={1,2,3,4,5,6}; //´ÙÂ÷¿ø ¹è¿­ÀÇ ¼±¾ð/ÃÊ±âÈ­ [Çà][¿­]     
-	int array2[2][2]={{1,2},{3,4}};   //´ÙÂ÷¿ø ¹è¿­ÀÇ ¼±¾ð/ÃÊ±âÈ­, ºñ°Ô µÇ´Â °ø°£Àº 0À¸·Î ÃÊ±âÈ­µÈ´Ù.     
-	int array3[][4]={1,2,3,4,5,6,7,8};  //2Â÷¿ø ¹è¿­¿¡¼­ Çà(¼¼·Î)´Â »ý·«ÀÌ °¡´ÉÇÏ´Ù.(¿­(°¡·Î)¸¦ ¾Ë·ÁÁÖ¾ú´Ù´Â °¡Á¤ ÇÏ¿¡)
+	int array1[2][3]={1,2,3,4,5,6}; //ë‹¤ì°¨ì› ë°°ì—´ì˜ ì„ ì–¸/ì´ˆê¸°í™” [í–‰][ì—´]     
+	int array2[2][2]={{1,2},{3,4}};   //ë‹¤ì°¨ì› ë°°ì—´ì˜ ì„ ì–¸/ì´ˆê¸°í™”, ë¹„ê²Œ ë˜ëŠ” ê³µê°„ì€ 0ìœ¼ë¡œ ì´ˆê¸°í™”ëœë‹¤.     
+	int array3[][4]={1,2,3,4,5,6,7,8};  //2ì°¨ì› ë°°ì—´ì—ì„œ í–‰(ì„¸ë¡œ)ëŠ” ìƒëžµì´ ê°€ëŠ¥í•˜ë‹¤.(ì—´(ê°€ë¡œ)ë¥¼ ì•Œë ¤ì£¼ì—ˆë‹¤ëŠ” ê°€ì • í•˜ì—)
 
-	printf("\narray[2][3]ÀÇ Ãâ·Â°ú ÇØ´ç ÁÖ¼Ò°ª Ãâ·Â\n");
+	printf("\narray[2][3]ì˜ ì¶œë ¥ê³¼ í•´ë‹¹ ì£¼ì†Œê°’ ì¶œë ¥\n");
 	int i=0;
 	int j=0;
 	for(i=0; i<2; i++){
 		for(j=0; j<3; j++){
-			printf("%d(%p)",array1[i][j],&array1[i][j]    );  //intÇü ¹è¿­ÀÌ¹Ç·Î ÁÖ¼Ò°ªµéÀÇ Â÷ÀÌ´Â 4¹ÙÀÌÆ®°¡ ³ª°Ô µÈ´Ù. 
+			printf("%d(%p)",array1[i][j],&array1[i][j]    );  //intí˜• ë°°ì—´ì´ë¯€ë¡œ ì£¼ì†Œê°’ë“¤ì˜ ì°¨ì´ëŠ” 4ë°”ì´íŠ¸ê°€ ë‚˜ê²Œ ëœë‹¤. 
 
 
 		}
@@ -26,31 +26,31 @@ void twomultiarray(){
 
 }
 //*************************************************************
-//2¹ø ÇÔ¼ö
-//»ïÂ÷¿ø ¹è¿­
+//2ë²ˆ í•¨ìˆ˜
+//ì‚¼ì°¨ì› ë°°ì—´
 void threemultiarray(){
 
-	int array1[3][3][2]={{{50,70},{49,48},{72,36}},{{30,40},{29,46},{78,96}},{{54,49},{79,16},{58,76}}}; //»ïÂ÷¿ø ¹è¿­ÀÇ ¼±¾ð
+	int array1[3][3][2]={{{50,70},{49,48},{72,36}},{{30,40},{29,46},{78,96}},{{54,49},{79,16},{58,76}}}; //ì‚¼ì°¨ì› ë°°ì—´ì˜ ì„ ì–¸
 	int i,j,k;
 	for(i=0; i<3; i++){
 		for(j=0; j<3; j++){
-				printf("%d¹Ý %d¹ø ÇÐ»ý : ±¹¾î%d ¿µ¾î%d    ",i+1,j+1,array1[i][j][0],array1[i][j][1]);
+				printf("%dë°˜ %dë²ˆ í•™ìƒ : êµ­ì–´%d ì˜ì–´%d    ",i+1,j+1,array1[i][j][0],array1[i][j][1]);
 			
 		}
 		printf("\n");
 
 	}
 }
-//3Â÷¿ø ¹è¿­Àº ¿©·¯°³ÀÇ 2Â÷¿ø ¹è¿­ÀÌ ¸ð¿©ÀÖ´Â ÇüÅÂ·Î ÀÌÇØÇÏ´Â °ÍÀÌ ÁÁ´Ù. 
+//3ì°¨ì› ë°°ì—´ì€ ì—¬ëŸ¬ê°œì˜ 2ì°¨ì› ë°°ì—´ì´ ëª¨ì—¬ìžˆëŠ” í˜•íƒœë¡œ ì´í•´í•˜ëŠ” ê²ƒì´ ì¢‹ë‹¤. 
 
 
 //*************************************************************
-//3¹ø ÇÔ¼ö
-//´ÙÁß Æ÷ÀÎÅÍ
+//3ë²ˆ í•¨ìˆ˜
+//ë‹¤ì¤‘ í¬ì¸í„°
 void doublepointer(){
 	double num=3.14;
-	double *ptr=&num;   //Æ÷ÀÎÅÍ º¯¼ö ptrÀÇ ¼±¾ð
-	double **dptr=&ptr;  //´õºí Æ÷ÀÎÅÍ º¯¼ö dptrÀÇ ¼±¾ð
+	double *ptr=&num;   //í¬ì¸í„° ë³€ìˆ˜ ptrì˜ ì„ ì–¸
+	double **dptr=&ptr;  //ë”ë¸” í¬ì¸í„° ë³€ìˆ˜ dptrì˜ ì„ ì–¸
 	printf("ptr : %p \n", ptr);
 	printf("*dptr : %p \n", *dptr);    //ptr==*dptr
 
@@ -61,10 +61,10 @@ void doublepointer(){
 	*ptr2=10.99;
 	printf("*ptr : %f \n", *ptr);
 	printf("*ptr2 : %f \n", *ptr2);   
-	printf("**dptr : %f \n", **dptr);     // dptr ¤Ñ ptr ¤Ñ num
+	printf("**dptr : %f \n", **dptr);     // dptr ã…¡ ptr ã…¡ num
 	                                      //         ptr2 /
 
-	double ***ddptr=&dptr;     //3Áß Æ÷ÀÎÅÍ º¯¼ö ddptrÀÇ ¼±¾ð
+	double ***ddptr=&dptr;     //3ì¤‘ í¬ì¸í„° ë³€ìˆ˜ ddptrì˜ ì„ ì–¸
 	printf("&ddptr %p \n",ddptr);
 	printf("&dptr ddptr %p %p\n",&dptr, ddptr);
 	printf("***ddptr %f \n",***ddptr );
@@ -76,8 +76,8 @@ void doublepointer(){
 
 }
 //*************************************************************
-//4¹ø ÇÔ¼ö
-//Æ÷ÀÎÅÍÀÇ Æ÷ÀÎÅÍ¸¦ ÀÌ¿ëÇÑ Call by Reference
+//4ë²ˆ í•¨ìˆ˜
+//í¬ì¸í„°ì˜ í¬ì¸í„°ë¥¼ ì´ìš©í•œ Call by Reference
 void Swap(int *n1,int *n2){
 	int num3=0;
 	num3=*n1;
@@ -105,59 +105,59 @@ int num4=40;
 int *pnum3=&num3;
 int *pnum4=&num4;
 printf("%d %d \n",*pnum3,*pnum4);
-Swap2(&pnum3,&pnum4);     //Æ÷ÀÎÅÍ º¯¼ö pnumÀÇ ÁÖ¼Ò°ª Àü´Þ
+Swap2(&pnum3,&pnum4);     //í¬ì¸í„° ë³€ìˆ˜ pnumì˜ ì£¼ì†Œê°’ ì „ë‹¬
 printf("%d %d \n",*pnum3,*pnum4);
-printf("%d %d \n",pnum3,&pnum3);  //pnum3Àº num3ÀÇ ÁÖ¼Ò°ªÀ» ÀÇ¹Ì, &pnum3Àº Æ÷ÀÎÅÍ º¯¼ö pnum3ÀÇ ÁÖ¼Ò°ªÀ» ÀÇ¹Ì
+printf("%d %d \n",pnum3,&pnum3);  //pnum3ì€ num3ì˜ ì£¼ì†Œê°’ì„ ì˜ë¯¸, &pnum3ì€ í¬ì¸í„° ë³€ìˆ˜ pnum3ì˜ ì£¼ì†Œê°’ì„ ì˜ë¯¸
 }
 
-/*Call by Reference¿¡¼­ µÎ ÇÔ¼öÀÇ Â÷ÀÌÁ¡
-1¹øÂ° ÇÔ¼ö´Â pnum1ÀÌ num1ÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ°í pnum2°¡ num2ÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÏ´Âµ¥ ÇØ´ç ÁÖ¼Ò°ªÀÇ ¸Þ¸ð¸®»ó¿¡ ÀúÀåµÈ °ªÀ» swapÇÑ °ÍÀÌ´Ù.(num1°ú num2¸¦ swap)
-Áï n1°ú n2¿¡ ÀúÀåµÈ °ªÀº ¹Ù²îÁö¸¸ pnum1°ú pnum2¿Í´Â º°°³ÀÇ º¯¼öÀÌ¹Ç·Î ¿©ÀüÈ÷ pnum1Àº num1ÀÇ ÁÖ¼Ò°ªÀ» ÀúÀå, pnum2´Â num2ÀÇ ÁÖ¼Ò°ªÀ» ÀúÀåÇÑ´Ù.
+/*Call by Referenceì—ì„œ ë‘ í•¨ìˆ˜ì˜ ì°¨ì´ì 
+1ë²ˆì§¸ í•¨ìˆ˜ëŠ” pnum1ì´ num1ì˜ ì£¼ì†Œê°’ì„ ì €ìž¥í•˜ê³  pnum2ê°€ num2ì˜ ì£¼ì†Œê°’ì„ ì €ìž¥í•˜ëŠ”ë° í•´ë‹¹ ì£¼ì†Œê°’ì˜ ë©”ëª¨ë¦¬ìƒì— ì €ìž¥ëœ ê°’ì„ swapí•œ ê²ƒì´ë‹¤.(num1ê³¼ num2ë¥¼ swap)
+ì¦‰ n1ê³¼ n2ì— ì €ìž¥ëœ ê°’ì€ ë°”ë€Œì§€ë§Œ pnum1ê³¼ pnum2ì™€ëŠ” ë³„ê°œì˜ ë³€ìˆ˜ì´ë¯€ë¡œ ì—¬ì „ížˆ pnum1ì€ num1ì˜ ì£¼ì†Œê°’ì„ ì €ìž¥, pnum2ëŠ” num2ì˜ ì£¼ì†Œê°’ì„ ì €ìž¥í•œë‹¤.
 
-2¹øÂ° ÇÔ¼ö´Â pnum3°ú pnum4ÀÇ ÁÖ¼Ò°ª ÀÚÃ¼¸¦ swapÇÏ¿´´Ù. Æ÷ÀÎÅÍÀÇ ÁÖ¼Ò°ªÀ» Àü´ÞÇÏ¿© pnum3°ú pnum4ÀÇ ÁÖ¼Ò°ªÀ» swapÇÏ¿´´Ù.
-Áï n3°ú n4¿¡ ÀúÀåµÈ °ªÀÌ ¹Ù²î¸é pnum3°ú pnum4ÀÇ swapµµ ÀÌ·ç¾îÁö°Ô µÈ´Ù.
+2ë²ˆì§¸ í•¨ìˆ˜ëŠ” pnum3ê³¼ pnum4ì˜ ì£¼ì†Œê°’ ìžì²´ë¥¼ swapí•˜ì˜€ë‹¤. í¬ì¸í„°ì˜ ì£¼ì†Œê°’ì„ ì „ë‹¬í•˜ì—¬ pnum3ê³¼ pnum4ì˜ ì£¼ì†Œê°’ì„ swapí•˜ì˜€ë‹¤.
+ì¦‰ n3ê³¼ n4ì— ì €ìž¥ëœ ê°’ì´ ë°”ë€Œë©´ pnum3ê³¼ pnum4ì˜ swapë„ ì´ë£¨ì–´ì§€ê²Œ ëœë‹¤.
 
 */
 //*************************************************************
-//5¹ø ÇÔ¼ö
-//Æ÷ÀÎÅÍ ¹è¿­
+//5ë²ˆ í•¨ìˆ˜
+//í¬ì¸í„° ë°°ì—´
 void pointerarray(){
 	int num1=10, num2=20, num3=30;
 	int *pnum1=&num1;
 	int *pnum2=&num2;
 	int *pnum3=&num3;
-	int *arr[]={pnum1,pnum2,pnum3};//Æ÷ÀÎÅÍ ¹è¿­ÀÇ ¼±¾ð, arrÀº Æ÷ÀÎÅÍ¸¦ ´ã´Â ´õºí Æ÷ÀÎÅÍÇü
+	int *arr[]={pnum1,pnum2,pnum3};//í¬ì¸í„° ë°°ì—´ì˜ ì„ ì–¸, arrì€ í¬ì¸í„°ë¥¼ ë‹´ëŠ” ë”ë¸” í¬ì¸í„°í˜•
 	printf("%d %d %d \n",pnum1,pnum2,pnum3);
-	printf("%p %p %p \n",pnum1,pnum2,pnum3);  //Æ÷ÀÎÅÍ º¯¼ö·Î ÀÌ·ç¾îÁø Æ÷ÀÎÅÍ ¹è¿­ÀÇ ÁÖ¼Ò°ª
+	printf("%p %p %p \n",pnum1,pnum2,pnum3);  //í¬ì¸í„° ë³€ìˆ˜ë¡œ ì´ë£¨ì–´ì§„ í¬ì¸í„° ë°°ì—´ì˜ ì£¼ì†Œê°’
 	printf("%d %d %d \n",*pnum1,*pnum2,*pnum3);
 	printf("%d %d %d \n",*arr[0],*arr[1],*arr[2]);
 	printf("%d %d %d \n",arr[0],arr[1],arr[2]);
     printf("%d %d \n",arr, &arr[0]);
 	
-	int **dptr=arr;     //¹è¿­ÀÇ ÀÌ¸§Àº Æ÷ÀÎÅÍÀÌ´Ù. Æ÷ÀÎÅÍ ¹è¿­ÀÌ¾úÀ¸¹Ç·Î ´õºí Æ÷ÀÎÅÍÇüÀÌ¹Ç·Î ÇüÀÌ ÀÏÄ¡ÇÑ´Ù.
+	int **dptr=arr;     //ë°°ì—´ì˜ ì´ë¦„ì€ í¬ì¸í„°ì´ë‹¤. í¬ì¸í„° ë°°ì—´ì´ì—ˆìœ¼ë¯€ë¡œ ë”ë¸” í¬ì¸í„°í˜•ì´ë¯€ë¡œ í˜•ì´ ì¼ì¹˜í•œë‹¤.
 	printf("%d %d %d \n",*dptr[0],*dptr[1],*dptr[2]); 
-	//Æ÷ÀÎÅÍ º¯¼öµµ ¹è¿­ÀÇ ÀÌ¸§Ã³·³ »ç¿ëÀÌ °¡´ÉÇÏ´Ù. =*dptr[0]=*arr[0]
+	//í¬ì¸í„° ë³€ìˆ˜ë„ ë°°ì—´ì˜ ì´ë¦„ì²˜ëŸ¼ ì‚¬ìš©ì´ ê°€ëŠ¥í•˜ë‹¤. =*dptr[0]=*arr[0]
 	printf("%d \n",sizeof(dptr));
 	// int *ptr=arr[]   (==*ptr=arr[0])
 	//ptr[0]=arr[0]
 	//int *arr2[];               **                *                       0
 	//int **ptr2=arr2[]         ptr2              ptr[0]                  *ptr[0]
 	//*ptr2[0]=*arr2[0]         arr2            - arr2[0] -               *arr2[0]
-	//                          ¹è¿­ÀÇ ÀÌ¸§  ¹è¿­ÀÇ ¿ä¼ÒÀÎ Æ÷ÀÎÅÍ   ¹è¿­ÀÇ ¿ä¼ÒÀÎ Æ÷ÀÎÅÍ°¡ °¡¸®Å°´Â ¸Þ¸ð¸®
-	//¹è¿­ Æ÷ÀÎÅÍ¿Í Æ÷ÀÎÅÍ ¹è¿­ÀÇ È¥µ¿ ÁÖÀÇ
+	//                          ë°°ì—´ì˜ ì´ë¦„  ë°°ì—´ì˜ ìš”ì†Œì¸ í¬ì¸í„°   ë°°ì—´ì˜ ìš”ì†Œì¸ í¬ì¸í„°ê°€ ê°€ë¦¬í‚¤ëŠ” ë©”ëª¨ë¦¬
+	//ë°°ì—´ í¬ì¸í„°ì™€ í¬ì¸í„° ë°°ì—´ì˜ í˜¼ë™ ì£¼ì˜
 
 	double num10=3.14;
 	double *ptr5=&num10;
 	printf("%d %d", sizeof(&num10), sizeof(ptr5));
 }
-/*******************************´ÙÁß Æ÷ÀÎÅÍÀÇ ÀÇÀÇ*************************
+/*******************************ë‹¤ì¤‘ í¬ì¸í„°ì˜ ì˜ì˜*************************
 
-Æ÷ÀÎÅÍ´Â ÇÔ¼ö ³»¿¡¼­ ÇÔ¼ö ¿ÜºÎ¿¡ ¼±¾ðµÈ º¯¼ö¿¡ Á¢±ÙÇÏ´Â ¹æ¹ýÀ» Á¦½ÃÇØÁØ´Ù.
+í¬ì¸í„°ëŠ” í•¨ìˆ˜ ë‚´ì—ì„œ í•¨ìˆ˜ ì™¸ë¶€ì— ì„ ì–¸ëœ ë³€ìˆ˜ì— ì ‘ê·¼í•˜ëŠ” ë°©ë²•ì„ ì œì‹œí•´ì¤€ë‹¤.
 
 */
 //*************************************************************
-//6¹ø ÇÔ¼ö
-//´ÙÂ÷¿ø ¹è¿­°ú Æ÷ÀÎÅÍÀÇ °ü°è
+//6ë²ˆ í•¨ìˆ˜
+//ë‹¤ì°¨ì› ë°°ì—´ê³¼ í¬ì¸í„°ì˜ ê´€ê³„
 void relation(){
 	int array[3][3]={{1,2,3},{4,5,6},{7,8,9}};
 	printf("%d \n", array);
@@ -170,41 +170,41 @@ void relation(){
 	printf("%d \n", sizeof(array));
 	printf("%d \n", sizeof(array[0]));
 	printf("%d \n\n", sizeof(array[0][0]));
-	//array´Â ¹è¿­ÀÇ Ã¹¹øÂ° ¿ä¼Ò¸¦ °¡¸®Å°¸é¼­ ¹è¿­ÀÇ ÀüÃ¼¸¦ ÀÇ¹ÌÇÑ´Ù.
-	//array[0]Àº 1ÇàÀÇ Ã¹¹øÂ° ¿ä¼Ò¸¦ °¡¸®Å°¸é¼­ 1ÇàÀ» ÀÇ¹ÌÇÑ´Ù.
-	//array[1]Àº 2ÇàÀÇ Ã¹¹øÂ° ¿ä¼Ò¸¦ °¡¸®Å°¸é¼­ 1ÇàÀ» ÀÇ¹ÌÇÑ´Ù.
-	//array[0][0]Àº Ã¹¹øÂ° ¿ä¼Ò¸¦ °¡¸®Å°¸é¼­ 1Çà 1¿­À» ÀÇ¹ÌÇÑ´Ù.
+	//arrayëŠ” ë°°ì—´ì˜ ì²«ë²ˆì§¸ ìš”ì†Œë¥¼ ê°€ë¦¬í‚¤ë©´ì„œ ë°°ì—´ì˜ ì „ì²´ë¥¼ ì˜ë¯¸í•œë‹¤.
+	//array[0]ì€ 1í–‰ì˜ ì²«ë²ˆì§¸ ìš”ì†Œë¥¼ ê°€ë¦¬í‚¤ë©´ì„œ 1í–‰ì„ ì˜ë¯¸í•œë‹¤.
+	//array[1]ì€ 2í–‰ì˜ ì²«ë²ˆì§¸ ìš”ì†Œë¥¼ ê°€ë¦¬í‚¤ë©´ì„œ 1í–‰ì„ ì˜ë¯¸í•œë‹¤.
+	//array[0][0]ì€ ì²«ë²ˆì§¸ ìš”ì†Œë¥¼ ê°€ë¦¬í‚¤ë©´ì„œ 1í–‰ 1ì—´ì„ ì˜ë¯¸í•œë‹¤.
 	printf("%p \n", array);
-	printf("%p \n", array+1); //ÁÖ¼Ò°ªÀÌ 12°¡ Áõ°¡Çß´Ù. Áï 3ÇàÀÌ¹Ç·Î intÇü*3¸¸Å­ Áõ°¡ÇÏ¿© [0][0]->[1][0]ÀÌ µÇ¾ú´Ù.
-	                          //2Â÷¿ø ¹è¿­¿¡¼­ÀÇ Áõ°¨¿¬»êÀº °¡·ÎÀÇ ±æÀÌ¿¡ µû¶ó¼­ ´Þ¶óÁø´Ù.
-	                          //Áï 2Â÷¿ø ¹è¿­ÀÇ Æ÷ÀÎÅÍÇüÀ» °áÁ¤Áþ±â ¾î·Á¿î ÀÌÀ¯°¡ µÈ´Ù.
+	printf("%p \n", array+1); //ì£¼ì†Œê°’ì´ 12ê°€ ì¦ê°€í–ˆë‹¤. ì¦‰ 3í–‰ì´ë¯€ë¡œ intí˜•*3ë§Œí¼ ì¦ê°€í•˜ì—¬ [0][0]->[1][0]ì´ ë˜ì—ˆë‹¤.
+	                          //2ì°¨ì› ë°°ì—´ì—ì„œì˜ ì¦ê°ì—°ì‚°ì€ ê°€ë¡œì˜ ê¸¸ì´ì— ë”°ë¼ì„œ ë‹¬ë¼ì§„ë‹¤.
+	                          //ì¦‰ 2ì°¨ì› ë°°ì—´ì˜ í¬ì¸í„°í˜•ì„ ê²°ì •ì§“ê¸° ì–´ë ¤ìš´ ì´ìœ ê°€ ëœë‹¤.
 
-	//À§ ¹è¿­ÀÇ Æ÷ÀÎÅÍ º¯¼ö¸¦ ¼±¾ðÇÏ·Á¸é 2°¡Áö¸¦ °í·Á 
-	//1.°¡¸®Å°´Â ´ë»óÀÌ intÇü º¯¼öÀÌ´Ù. 2. sizeof(int)x3¸¸Å­ÀÇ Å©±â´ÜÀ§·Î Áõ°¨ÇÑ´Ù.
+	//ìœ„ ë°°ì—´ì˜ í¬ì¸í„° ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ë ¤ë©´ 2ê°€ì§€ë¥¼ ê³ ë ¤ 
+	//1.ê°€ë¦¬í‚¤ëŠ” ëŒ€ìƒì´ intí˜• ë³€ìˆ˜ì´ë‹¤. 2. sizeof(int)x3ë§Œí¼ì˜ í¬ê¸°ë‹¨ìœ„ë¡œ ì¦ê°í•œë‹¤.
 
-	//*************¹è¿­ÀÇ Æ÷ÀÎÅÍ**********************
-	int (*ptr)[3]; //Æ÷ÀÎÅÍ º¯¼öÀÇ ¼±¾ð. ÀÚ·áÇü(*Æ÷ÀÎÅÍÀÌ¸§)[°¡·ÎÀÇ±æÀÌ]
+	//*************ë°°ì—´ì˜ í¬ì¸í„°**********************
+	int (*ptr)[3]; //í¬ì¸í„° ë³€ìˆ˜ì˜ ì„ ì–¸. ìžë£Œí˜•(*í¬ì¸í„°ì´ë¦„)[ê°€ë¡œì˜ê¸¸ì´]
 	ptr=array; //== ptr=&array[0];
 	int i, j;
 	for(i=0; i<3; i++){
 		for(j=0; j<3; j++){
-			printf("%d   ",ptr[i][j]);   //2Â÷¿ø ¹è¿­ÀÇ Æ÷ÀÎÅÍ¸¦ È°¿ëÇÏ¿© ¹è¿­ Ãâ·Â
+			printf("%d   ",ptr[i][j]);   //2ì°¨ì› ë°°ì—´ì˜ í¬ì¸í„°ë¥¼ í™œìš©í•˜ì—¬ ë°°ì—´ ì¶œë ¥
 
 		}
 		printf("\n");
 	}
 
-	//***È¥µ¿ÁÖÀÇ***
-	//int *Word[3]    ->Æ÷ÀÎÅÍ ¹è¿­  [¹è¿­ ¼±¾ð]
-	//int (*Word)[3]  ->¹è¿­(ÀÇ) Æ÷ÀÎÅÍ [Æ÷ÀÎÅÍ ¼±¾ð]
+	//***í˜¼ë™ì£¼ì˜***
+	//int *Word[3]    ->í¬ì¸í„° ë°°ì—´  [ë°°ì—´ ì„ ì–¸]
+	//int (*Word)[3]  ->ë°°ì—´(ì˜) í¬ì¸í„° [í¬ì¸í„° ì„ ì–¸]
 	
 
 
 }
 //*************************************************************
-//7¹ø ÇÔ¼ö
-//2Â÷¿ø ¹è¿­À» ÇÔ¼öÀÇ ÀÎÀÚ·Î Àü´ÞÇÏ±â
-void Function1(int (*ptr)[4]){    //¹è¿­ÀÇ ÁÖ¼Ò°ªÀÇ ¸Þ¸ð¸®¿¡ Á¢±Ù.(2Â÷¿ø ¹è¿­ÀÇ Æ÷ÀÎÅÍ)
+//7ë²ˆ í•¨ìˆ˜
+//2ì°¨ì› ë°°ì—´ì„ í•¨ìˆ˜ì˜ ì¸ìžë¡œ ì „ë‹¬í•˜ê¸°
+void Function1(int (*ptr)[4]){    //ë°°ì—´ì˜ ì£¼ì†Œê°’ì˜ ë©”ëª¨ë¦¬ì— ì ‘ê·¼.(2ì°¨ì› ë°°ì—´ì˜ í¬ì¸í„°)
 	int i,j;
 	for(i=0; i<2; i++){
 		for(j=0; j<4; j++){
@@ -217,16 +217,16 @@ void Function1(int (*ptr)[4]){    //¹è¿­ÀÇ ÁÖ¼Ò°ªÀÇ ¸Þ¸ð¸®¿¡ Á¢±Ù.(2Â÷¿ø ¹è¿­ÀÇ 
 }
 void givearray(){
 	int array[2][4]={1,2,3,4,5,6,7,8};
-	Function1(array);   //¹è¿­ÀÇ ÁÖ¼Ò°ª Àü´Þ
+	Function1(array);   //ë°°ì—´ì˜ ì£¼ì†Œê°’ ì „ë‹¬
 	printf("\n");
-	//2Â÷¿ø ¹è¿­¿¡¼­µµ arr[i]¿Í *(arr+i)´Â °°´Ù.
+	//2ì°¨ì› ë°°ì—´ì—ì„œë„ arr[i]ì™€ *(arr+i)ëŠ” ê°™ë‹¤.
 	int array2[3]={1,2,3};
 	printf("array2[1] %d \n",array2[1]);
 	printf("*array2+1 %d \n",*array2+1);
 	printf("array[1][2] %d \n",array[1][2]);
-	printf("(*(array+1))[2] %d \n",(*(array+1))[2]); //array+1Àº ÇàÀÌ 1 Áõ°¡ÇÑ´Ù. array[1]À» *(array+1)·Î Ä¡È¯
-	printf("(*array[1]+2) %d \n",(*array[1]+2));   //array[1][2]¿¡¼­ array[1]À» A·Î Ä¡È¯ÇÏ¸é A[2] ->*(A+2)->*(array[1]+2)
-	printf("*(*array+1)+2 %d \n",*(*(array+1)+2)); //À§ÀÇ ½Ä¿¡¼­ array[1]À» *(array+1)·Î Ä¡È¯
+	printf("(*(array+1))[2] %d \n",(*(array+1))[2]); //array+1ì€ í–‰ì´ 1 ì¦ê°€í•œë‹¤. array[1]ì„ *(array+1)ë¡œ ì¹˜í™˜
+	printf("(*array[1]+2) %d \n",(*array[1]+2));   //array[1][2]ì—ì„œ array[1]ì„ Aë¡œ ì¹˜í™˜í•˜ë©´ A[2] ->*(A+2)->*(array[1]+2)
+	printf("*(*array+1)+2 %d \n",*(*(array+1)+2)); //ìœ„ì˜ ì‹ì—ì„œ array[1]ì„ *(array+1)ë¡œ ì¹˜í™˜
 
 
 
@@ -238,10 +238,10 @@ void givearray(){
 
 }
 
-//***********************¸ÞÀÎ ÇÔ¼ö******************************
+//***********************ë©”ì¸ í•¨ìˆ˜******************************
 int main(){
 	int num=0;
-	printf("2Â÷¿ø ¹è¿­¿¡ ´ëÇØ º¸·Á¸é 1¹øÀ», 3Â÷¿ø ¹è¿­¿¡ ´ëÇØ º¸·Á¸é 2¹øÀ», ´ÙÁß Æ÷ÀÎÅÍ¿¡ ´ëÇØ º¸·Á¸é 3¹øÀ», Æ÷ÀÎÅÍÀÇ Æ÷ÀÎÅÍ¸¦ ÀÌ¿ëÇÑ Call by Reference¿¡ ´ëÇØ º¸½Ã·Á¸é 4¹øÀ»,\n Æ÷ÀÎÅÍ ¹è¿­¿¡ ´ëÇØ º¸½Ã·Á¸é 5¹øÀ», ´ÙÂ÷¿ø ¹è¿­°ú Æ÷ÀÎÅÍÀÇ °ü°è¿¡ ´ëÇØ º¸·Á¸é 6¹øÀ», 2Â÷¿ø ¹è¿­À» ÇÔ¼öÀÇ ÀÎÀÚ·Î Àü´ÞÇÏ´Â ¹æ¹ýÀ» º¸·Á¸é 7¹øÀ» ´­·¯ÁÖ¼¼¿ä.");
+	printf("2ì°¨ì› ë°°ì—´ì— ëŒ€í•´ ë³´ë ¤ë©´ 1ë²ˆì„, 3ì°¨ì› ë°°ì—´ì— ëŒ€í•´ ë³´ë ¤ë©´ 2ë²ˆì„, ë‹¤ì¤‘ í¬ì¸í„°ì— ëŒ€í•´ ë³´ë ¤ë©´ 3ë²ˆì„, í¬ì¸í„°ì˜ í¬ì¸í„°ë¥¼ ì´ìš©í•œ Call by Referenceì— ëŒ€í•´ ë³´ì‹œë ¤ë©´ 4ë²ˆì„,\n í¬ì¸í„° ë°°ì—´ì— ëŒ€í•´ ë³´ì‹œë ¤ë©´ 5ë²ˆì„, ë‹¤ì°¨ì› ë°°ì—´ê³¼ í¬ì¸í„°ì˜ ê´€ê³„ì— ëŒ€í•´ ë³´ë ¤ë©´ 6ë²ˆì„, 2ì°¨ì› ë°°ì—´ì„ í•¨ìˆ˜ì˜ ì¸ìžë¡œ ì „ë‹¬í•˜ëŠ” ë°©ë²•ì„ ë³´ë ¤ë©´ 7ë²ˆì„ ëˆŒëŸ¬ì£¼ì„¸ìš”.");
 	scanf("%d",&num);
 	if(num==1){
 		twomultiarray();
