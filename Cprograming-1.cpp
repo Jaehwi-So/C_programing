@@ -1,11 +1,11 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<Windows.h>
 
-//**ÇÔ¼ö, ¿¬»êÀÚ(»ê¼ú, ³í¸®, ºñÆ® ¿¬»êÀÚ), ÀÚ·áÇü
+//**í•¨ìˆ˜, ì—°ì‚°ìž(ì‚°ìˆ , ë…¼ë¦¬, ë¹„íŠ¸ ì—°ì‚°ìž), ìžë£Œí˜•
 //****************************************************************************************************************************
-//#1¹ø ÇÔ¼ö
-//1ºÎÅÍ n1±îÁö ÇÕ¿¬»ê ÇÔ¼ö(ÀÔ·Â°ª Ãâ·Â°ª Á¸Àç ÇÔ¼ö)
-//Àç±ÍÇÔ¼ö
+//#1ë²ˆ í•¨ìˆ˜
+//1ë¶€í„° n1ê¹Œì§€ í•©ì—°ì‚° í•¨ìˆ˜(ìž…ë ¥ê°’ ì¶œë ¥ê°’ ì¡´ìž¬ í•¨ìˆ˜)
+//ìž¬ê·€í•¨ìˆ˜
 int function(int n1){
 
 		if(n1==0){
@@ -17,16 +17,16 @@ int function(int n1){
 }
 
 //****************************************************************************************************************************
-//#2¹ø ÇÔ¼ö
-// ¾È³»¹® Ãâ·Â ÇÔ¼ö(ÀÔ·Â°ª, Ãâ·Â°ª µÑ´Ù Á¸Àç X ÇÔ¼ö)
+//#2ë²ˆ í•¨ìˆ˜
+// ì•ˆë‚´ë¬¸ ì¶œë ¥ í•¨ìˆ˜(ìž…ë ¥ê°’, ì¶œë ¥ê°’ ë‘˜ë‹¤ ì¡´ìž¬ X í•¨ìˆ˜)
 void say()
-{printf("\nÀÛ¾÷À» °ñ¶óÁÖ¼¼¿ä. \n");} 
+{printf("\nìž‘ì—…ì„ ê³¨ë¼ì£¼ì„¸ìš”. \n");} 
 
 
 //****************************************************************************************************************************
-//#3¹ø ÇÔ¼ö
-//º°¸ð¾ç ±×·¡ÇÁ ÇÔ¼ö(ÀÔ·Â°ª Á¸Àç, Ãâ·Â°ª Á¸Àç X ÇÔ¼ö)
-//for¹® ÀÌ¿ë, continue
+//#3ë²ˆ í•¨ìˆ˜
+//ë³„ëª¨ì–‘ ê·¸ëž˜í”„ í•¨ìˆ˜(ìž…ë ¥ê°’ ì¡´ìž¬, ì¶œë ¥ê°’ ì¡´ìž¬ X í•¨ìˆ˜)
+//forë¬¸ ì´ìš©, continue
 void star(int n1, int exept, int how){
 	int n4=n1;
 	for(n1; n1>0; n1--){
@@ -35,49 +35,49 @@ void star(int n1, int exept, int how){
 		for(n2; n2>0; n2--){
         printf(" ");
 		}
-		if(n1%exept==0&&how==100){printf("%dÀÇ ¹è¼ö\n", exept);
+		if(n1%exept==0&&how==100){printf("%dì˜ ë°°ìˆ˜\n", exept);
 		continue;
 		}
 	    for(n3; n4-n3>=0; n3++){
 		printf("*");
 		}
-		printf("(%d¹øÂ° ¼ö)\n",n1);
+		printf("(%dë²ˆì§¸ ìˆ˜)\n",n1);
 	}
 }
 
 //****************************************************************************************************************************
-//#4¹ø ÇÔ¼ö
-//¼ýÀÚ ºñ±³ ¿¬»ê ÇÔ¼ö(ÀÔ·Â°ª Á¸Àç, Ãâ·Â°ª Á¸Àç ÇÔ¼ö)
-//if¹®(Á¶°Ç¹® ÀÌ¿ë), ¹ÝÈ¯°ªÀ» ÅëÇØ main ÇÔ¼ö¿¡¼­ switchÀÌ¿ë
-//2Áß Á¶°Ç¹®(Á¶°Ç¹® ¾ÈÀÇ Á¶°Ç¹®)
-//°ü°è ¿¬»êÀÚ, ³í¸® ¿¬»êÀÚ
-//¼±À§ Áõ°¡, ÈÄÀ§ °¨¼Ò
+//#4ë²ˆ í•¨ìˆ˜
+//ìˆ«ìž ë¹„êµ ì—°ì‚° í•¨ìˆ˜(ìž…ë ¥ê°’ ì¡´ìž¬, ì¶œë ¥ê°’ ì¡´ìž¬ í•¨ìˆ˜)
+//ifë¬¸(ì¡°ê±´ë¬¸ ì´ìš©), ë°˜í™˜ê°’ì„ í†µí•´ main í•¨ìˆ˜ì—ì„œ switchì´ìš©
+//2ì¤‘ ì¡°ê±´ë¬¸(ì¡°ê±´ë¬¸ ì•ˆì˜ ì¡°ê±´ë¬¸)
+//ê´€ê³„ ì—°ì‚°ìž, ë…¼ë¦¬ ì—°ì‚°ìž
+//ì„ ìœ„ ì¦ê°€, í›„ìœ„ ê°ì†Œ
 int comp(int n1, int res){
 	int nu1=0;
-	printf("¸ðµç ºñ±³¸¦ ¿øÇÏ½Ã¸é 2¸¦, ÆÇº°¸¸À» ¿øÇÏ½Ã¸é ¾Æ¹« ¼ýÀÚ¸¦ ´­·¯ÁÖ¼¼¿ä : ");
+	printf("ëª¨ë“  ë¹„êµë¥¼ ì›í•˜ì‹œë©´ 2ë¥¼, íŒë³„ë§Œì„ ì›í•˜ì‹œë©´ ì•„ë¬´ ìˆ«ìžë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš” : ");
 	scanf("%d", &nu1);
 
 	if(nu1==2){
 		int zeroorone;
-		if(n1>res){printf("ºñ±³°ªº¸´Ù ÀÛ½À´Ï´Ù\n");}            //°ü°è ¿¬»êÀÚ            ´Ù¸£´Ù !=  °°´Ù== ´ë¼Ò°ü°è< > <= >=
-		if(n1>=res){printf("ºñ±³°ªº¸´Ù ÀÛ°Å³ª °°½À´Ï´Ù\n");}
-		if(n1<res){printf("ºñ±³°ªº¸´Ù Å®´Ï´Ù\n");}
-		if(n1<=res){printf("ºñ±³°ªº¸´Ù Å©°Å³ª °°½À´Ï´Ù\n");}
-		if(n1==res){printf("ºñ±³°ª°ú °°½À´Ï´Ù\n");}
-		if(n1!=res){printf("ºñ±³°ª°ú ´Ù¸¨´Ï´Ù\n");}           
-		if(n1%2==0&&res%2==0){printf("µÑ ´Ù Â¦¼öÀÔ´Ï´Ù\n");}            //³í¸® ¿¬»êÀÚ         AND &&       OR ||        NOT !
-		if(n1%2==0||res%2==0){printf("µÑ Áß ÇÏ³ª°¡ Â¦¼öÀÔ´Ï´Ù.\n");}
+		if(n1>res){printf("ë¹„êµê°’ë³´ë‹¤ ìž‘ìŠµë‹ˆë‹¤\n");}            //ê´€ê³„ ì—°ì‚°ìž            ë‹¤ë¥´ë‹¤ !=  ê°™ë‹¤== ëŒ€ì†Œê´€ê³„< > <= >=
+		if(n1>=res){printf("ë¹„êµê°’ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ìŠµë‹ˆë‹¤\n");}
+		if(n1<res){printf("ë¹„êµê°’ë³´ë‹¤ í½ë‹ˆë‹¤\n");}
+		if(n1<=res){printf("ë¹„êµê°’ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ìŠµë‹ˆë‹¤\n");}
+		if(n1==res){printf("ë¹„êµê°’ê³¼ ê°™ìŠµë‹ˆë‹¤\n");}
+		if(n1!=res){printf("ë¹„êµê°’ê³¼ ë‹¤ë¦…ë‹ˆë‹¤\n");}           
+		if(n1%2==0&&res%2==0){printf("ë‘˜ ë‹¤ ì§ìˆ˜ìž…ë‹ˆë‹¤\n");}            //ë…¼ë¦¬ ì—°ì‚°ìž         AND &&       OR ||        NOT !
+		if(n1%2==0||res%2==0){printf("ë‘˜ ì¤‘ í•˜ë‚˜ê°€ ì§ìˆ˜ìž…ë‹ˆë‹¤.\n");}
 		zeroorone=((n1%2==0)&&(res%2==0));
-		printf("%d=ÂüÀÌ¸é µÑ ´Ù Â¦¼öÀÌ°Å³ª 0ÀÔ´Ï´Ù. \n",zeroorone);
+		printf("%d=ì°¸ì´ë©´ ë‘˜ ë‹¤ ì§ìˆ˜ì´ê±°ë‚˜ 0ìž…ë‹ˆë‹¤. \n",zeroorone);
 		zeroorone=((n1%2==0)||(res%2==0));
-		printf("%d=ÂüÀÌ¸é µÑ Áß ÇÏ³ª°¡ Â¦¼öÀÌ°Å³ª 0ÀÔ´Ï´Ù. \n",zeroorone);
+		printf("%d=ì°¸ì´ë©´ ë‘˜ ì¤‘ í•˜ë‚˜ê°€ ì§ìˆ˜ì´ê±°ë‚˜ 0ìž…ë‹ˆë‹¤. \n",zeroorone);
 		zeroorone=!res;
-		printf("%d=ÂüÀÌ¸é ´ç½ÅÀÇ ¼ýÀÚ´Â 0ÀÔ´Ï´Ù. \n",zeroorone);                  
-		printf("¿ø·¡ ¼ýÀÚ : %d\n", res);                           //¼±À§ Áõ°¡, ÈÄÀ§ °¨¼Ò ¿¬»ê
-		printf("ÈÄÀ§ Áõ°¡ res++ : %d\n", res++);
-		printf("´ÙÀ½ ¹®Àå °á°ú : %d\n", res);
-		printf("¼±À§ °¨¼Ò --res : %d\n", --res);
-		printf("´ÙÀ½ ¹®Àå °á°ú : %d\n", res);
+		printf("%d=ì°¸ì´ë©´ ë‹¹ì‹ ì˜ ìˆ«ìžëŠ” 0ìž…ë‹ˆë‹¤. \n",zeroorone);                  
+		printf("ì›ëž˜ ìˆ«ìž : %d\n", res);                           //ì„ ìœ„ ì¦ê°€, í›„ìœ„ ê°ì†Œ ì—°ì‚°
+		printf("í›„ìœ„ ì¦ê°€ res++ : %d\n", res++);
+		printf("ë‹¤ìŒ ë¬¸ìž¥ ê²°ê³¼ : %d\n", res);
+		printf("ì„ ìœ„ ê°ì†Œ --res : %d\n", --res);
+		printf("ë‹¤ìŒ ë¬¸ìž¥ ê²°ê³¼ : %d\n", res);
 		return 3;
 	}
 
@@ -95,12 +95,12 @@ int comp(int n1, int res){
 	}
 }
 //****************************************************************************************************************************
-//#5¹ø ÇÔ¼ö
-//2Áß ¹Ýº¹¹®À» ÀÌ¿ëÇÑ 10Áø¹ýÀ» 2Áø¹ýÀ¸·Î ¹Ù²Ù±â
-//ºñÆ® ¿¬»êÀÚ
-//ÀÚ·áÇü, ¼­½Ä¹®ÀÚ, ¾Æ½ºÅ°ÄÚµå, ¹®ÀÚ¿­(Æ÷ÀÎÅÍX)
+//#5ë²ˆ í•¨ìˆ˜
+//2ì¤‘ ë°˜ë³µë¬¸ì„ ì´ìš©í•œ 10ì§„ë²•ì„ 2ì§„ë²•ìœ¼ë¡œ ë°”ê¾¸ê¸°
+//ë¹„íŠ¸ ì—°ì‚°ìž
+//ìžë£Œí˜•, ì„œì‹ë¬¸ìž, ì•„ìŠ¤í‚¤ì½”ë“œ, ë¬¸ìžì—´(í¬ì¸í„°X)
 void analyze(int num5){
-	printf("%d¸¦ 2Áø¼ö·Î º¯È¯ : ",num5);                         //2Áø¼ö º¯È¯ ¹Ýº¹¹®
+	printf("%dë¥¼ 2ì§„ìˆ˜ë¡œ ë³€í™˜ : ",num5);                         //2ì§„ìˆ˜ ë³€í™˜ ë°˜ë³µë¬¸
     int ress=num5;
 	int less=0;
 	int wess=0;
@@ -118,112 +118,112 @@ void analyze(int num5){
 		wess=ress/zin5;
 		printf("%d",wess);
 		less=ress%zin5;
-		ress=less;                                                                        //2Áø¼ö º¯È¯ ¹Ýº¹¹®
+		ress=less;                                                                        //2ì§„ìˆ˜ ë³€í™˜ ë°˜ë³µë¬¸
 
 	}
-	printf("\n(À½¼ö·Î ÀüÈ¯ÇÏ´Â ¹ýÀº À½ÀÇ º¸¼ö¸¦ ÃëÇÏ°í +1, ¸Ç Ã³À½ ¸Þ¸ð¸®´Â ºÎÈ£¸¦ °áÁ¤ÇÏ´Â MSB)\n");  //ºñÆ® ¿¬»êÀÚ
+	printf("\n(ìŒìˆ˜ë¡œ ì „í™˜í•˜ëŠ” ë²•ì€ ìŒì˜ ë³´ìˆ˜ë¥¼ ì·¨í•˜ê³  +1, ë§¨ ì²˜ìŒ ë©”ëª¨ë¦¬ëŠ” ë¶€í˜¸ë¥¼ ê²°ì •í•˜ëŠ” MSB)\n");  //ë¹„íŠ¸ ì—°ì‚°ìž
 	int bit=0;
 	int bit2=7;
 	bit = num5 & bit2;
-	printf("7ÀÇ 2Áø¼ö Ç¥±â´Â 00000111\n");                                                        //ºñÆ® ¿¬»êÀÚ ¾Ï±â
-	printf("ºñÆ® ¿¬»êÀÚ AND (7 & %d) ÀÇ °á°ú´Â %d\n", num5, bit);                                 // A&B  µÑ´Ù 1ÀÌ¸é 1·Î ¹ÝÈ¯                   
+	printf("7ì˜ 2ì§„ìˆ˜ í‘œê¸°ëŠ” 00000111\n");                                                        //ë¹„íŠ¸ ì—°ì‚°ìž ì•”ê¸°
+	printf("ë¹„íŠ¸ ì—°ì‚°ìž AND (7 & %d) ì˜ ê²°ê³¼ëŠ” %d\n", num5, bit);                                 // A&B  ë‘˜ë‹¤ 1ì´ë©´ 1ë¡œ ë°˜í™˜                   
 	bit = num5 | bit2;
-	printf("ºñÆ® ¿¬»êÀÚ OR (7 | %d) ÀÇ °á°ú´Â %d\n", num5, bit);                                  // A|B  µÑÁß ÇÏ³ª°¡ 1ÀÌ¸é 1·Î ¹ÝÈ¯                                                        
+	printf("ë¹„íŠ¸ ì—°ì‚°ìž OR (7 | %d) ì˜ ê²°ê³¼ëŠ” %d\n", num5, bit);                                  // A|B  ë‘˜ì¤‘ í•˜ë‚˜ê°€ 1ì´ë©´ 1ë¡œ ë°˜í™˜                                                        
 	bit = num5 ^ bit2;
-	printf("ºñÆ® ¿¬»êÀÚ XOR (7 ^ %d) ÀÇ °á°ú´Â %d\n", num5, bit);                                 // A^B  ¼­·Î ´Ù¸¦ ¶§ 1·Î ¹ÝÈ¯
+	printf("ë¹„íŠ¸ ì—°ì‚°ìž XOR (7 ^ %d) ì˜ ê²°ê³¼ëŠ” %d\n", num5, bit);                                 // A^B  ì„œë¡œ ë‹¤ë¥¼ ë•Œ 1ë¡œ ë°˜í™˜
 	bit = ~num5;
-	printf("ºñÆ® ¿¬»êÀÚ NOT (~%d) ÀÇ °á°ú´Â %d\n", num5, bit);                                    // ~A   ¹ÝÀü
-	bit = num5;                                                                                 // °á°ú¸¸ ¹ÝÈ¯, AÀÇ °ªÀº º¯È­ ¾øÀ½
-	printf("ºñÆ® ¿¬»êÀÚ (>>%d) ÀÇ °á°ú´Â %d\n", num5, bit>>2);                                   // A<<2 ºñÆ®¸¦ 2Ä­ ¿ÞÂÊÀ¸·Î ÀÌµ¿
-	bit = num5;                                                                                 // °á°ú¸¸ ¹ÝÈ¯, AÀÇ °ªÀº º¯È­ ¾øÀ½
-	printf("ºñÆ® ¿¬»êÀÚ (<<%d) ÀÇ °á°ú´Â %d\n", num5, bit<<2);
+	printf("ë¹„íŠ¸ ì—°ì‚°ìž NOT (~%d) ì˜ ê²°ê³¼ëŠ” %d\n", num5, bit);                                    // ~A   ë°˜ì „
+	bit = num5;                                                                                 // ê²°ê³¼ë§Œ ë°˜í™˜, Aì˜ ê°’ì€ ë³€í™” ì—†ìŒ
+	printf("ë¹„íŠ¸ ì—°ì‚°ìž (>>%d) ì˜ ê²°ê³¼ëŠ” %d\n", num5, bit>>2);                                   // A<<2 ë¹„íŠ¸ë¥¼ 2ì¹¸ ì™¼ìª½ìœ¼ë¡œ ì´ë™
+	bit = num5;                                                                                 // ê²°ê³¼ë§Œ ë°˜í™˜, Aì˜ ê°’ì€ ë³€í™” ì—†ìŒ
+	printf("ë¹„íŠ¸ ì—°ì‚°ìž (<<%d) ì˜ ê²°ê³¼ëŠ” %d\n", num5, bit<<2);
 
-	printf("ÇöÀç ¼ýÀÚ ÀÚ·áÇü(int)ÀÇ Å©±â : %d \n", sizeof(num5));          //ÀÚ·áÇü        sizeof(A) : AÀÇ ÀÚ·áÇüÀÇ Å©±â¸¦ Á¤¼ö·Î Ç¥Çö
-	double num10 = 3.14;                                                 //Á¤¼ö ÀÚ·áÇü char(1) short(2) int(4) long(4) long long(8) 
-	                                                                     //½Ç¼ö ÀÚ·áÇü float(4) double(8) long double(8+)
-	printf ("%d(int) + %f(double)ÀÇ ¿¬»ê °á°ú(printf¼­½Ä¹®ÀÚ %%d) : %d \n", num5, num10, num5+num10);  
+	printf("í˜„ìž¬ ìˆ«ìž ìžë£Œí˜•(int)ì˜ í¬ê¸° : %d \n", sizeof(num5));          //ìžë£Œí˜•        sizeof(A) : Aì˜ ìžë£Œí˜•ì˜ í¬ê¸°ë¥¼ ì •ìˆ˜ë¡œ í‘œí˜„
+	double num10 = 3.14;                                                 //ì •ìˆ˜ ìžë£Œí˜• char(1) short(2) int(4) long(4) long long(8) 
+	                                                                     //ì‹¤ìˆ˜ ìžë£Œí˜• float(4) double(8) long double(8+)
+	printf ("%d(int) + %f(double)ì˜ ì—°ì‚° ê²°ê³¼(printfì„œì‹ë¬¸ìž %%d) : %d \n", num5, num10, num5+num10);  
 	
-	printf ("%d(int) + %f(double)ÀÇ ¿¬»ê °á°ú(printf¼­½Ä¹®ÀÚ %%f) : %f \n", num5, num10, num5+num10);
+	printf ("%d(int) + %f(double)ì˜ ì—°ì‚° ê²°ê³¼(printfì„œì‹ë¬¸ìž %%f) : %f \n", num5, num10, num5+num10);
 
-	printf("16Áø¼ö Á¤¼ö·Î Ãâ·Â : %X \n", num5);             //*****¼­½Ä ¹®ÀÚ(printf)*******         ********¼­½Ä ¹®ÀÚ(scanf)******
-	printf("8Áø¼ö Á¤¼ö·Î Ãâ·Â : %o \n", num5);              //%d(int, char, short) %ld(long)                %d(10Áø¼ö)
-	                                                       //%lld(long long) (10Áø¼ö)            
-	char word = '1';                                      //%o(8Áø¼ö)  %X, %x(16Áø¼ö)                  %o(8Áø¼ö), %x(16Áø¼ö)
+	printf("16ì§„ìˆ˜ ì •ìˆ˜ë¡œ ì¶œë ¥ : %X \n", num5);             //*****ì„œì‹ ë¬¸ìž(printf)*******         ********ì„œì‹ ë¬¸ìž(scanf)******
+	printf("8ì§„ìˆ˜ ì •ìˆ˜ë¡œ ì¶œë ¥ : %o \n", num5);              //%d(int, char, short) %ld(long)                %d(10ì§„ìˆ˜)
+	                                                       //%lld(long long) (10ì§„ìˆ˜)            
+	char word = '1';                                      //%o(8ì§„ìˆ˜)  %X, %x(16ì§„ìˆ˜)                  %o(8ì§„ìˆ˜), %x(16ì§„ìˆ˜)
 	char word2 = 66;
-	printf("¾Æ½ºÅ° ÄÚµå : %d \n", word);                  //%f(float,double) %Lf(long double)       %f,%e,%g(float) %lf(double)
-	printf("°ª¿¡ ´ëÀÀÇÏ´Â ¹®ÀÚ : %c \n", word2);          //%c(°ª¿¡ ´ëÀÀÇÏ´Â ¹®ÀÚ(char,short,int)          %Lf(long double)
-	                                                     //%s(¹®ÀÚ¿­)                                       %s(¹®ÀÚ¿­)
+	printf("ì•„ìŠ¤í‚¤ ì½”ë“œ : %d \n", word);                  //%f(float,double) %Lf(long double)       %f,%e,%g(float) %lf(double)
+	printf("ê°’ì— ëŒ€ì‘í•˜ëŠ” ë¬¸ìž : %c \n", word2);          //%c(ê°’ì— ëŒ€ì‘í•˜ëŠ” ë¬¸ìž(char,short,int)          %Lf(long double)
+	                                                     //%s(ë¬¸ìžì—´)                                       %s(ë¬¸ìžì—´)
 	                                                                       
 	
 }
 
 //****************************************************************************************************************************
-//#¸ÞÀÎÇÔ¼ö
-//ÇÔ¼ö È£Ãâ
+//#ë©”ì¸í•¨ìˆ˜
+//í•¨ìˆ˜ í˜¸ì¶œ
 int main(){
 	int num=3;
 	int result=0;
 	int define=0;
 	int compare=0;
 	int point=0;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä(0~10 ÀÔ·Â ±ÇÀå) : ");             //printf
+	printf("ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”(0~10 ìž…ë ¥ ê¶Œìž¥) : ");             //printf
 	scanf("%d",&num);                          //scanf
-	result=function(num);                      //#1 ¼ýÀÚµéÀÇ ÇÕ ±¸ÇÏ´Â ÇÔ¼ö È£Ãâ
-	printf("1ºÎÅÍ %d±îÁöÀÇ ÇÕÀº %d",num,result);//¼ýÀÚµéÀÇ ÇÕ ±¸ÇÏ´Â ÇÔ¼ö Ãâ·Â
-	say();                                     //#2 ¾È³»¹® ÇÔ¼ö È£Ãâ
+	result=function(num);                      //#1 ìˆ«ìžë“¤ì˜ í•© êµ¬í•˜ëŠ” í•¨ìˆ˜ í˜¸ì¶œ
+	printf("1ë¶€í„° %dê¹Œì§€ì˜ í•©ì€ %d",num,result);//ìˆ«ìžë“¤ì˜ í•© êµ¬í•˜ëŠ” í•¨ìˆ˜ ì¶œë ¥
+	say();                                     //#2 ì•ˆë‚´ë¬¸ í•¨ìˆ˜ í˜¸ì¶œ
 	printf("**********************************************************************\n");
-	printf("¼ýÀÚÀÇ Å©±âºñ±³ : 0 \nº°¸ð¾ç ±×·¡ÇÁ: 1 \n¼ýÀÚ ºÐ¼® :2 \nÁ¾·á : ³ª¸ÓÁö ¼ýÀÚ\n");//°áÁ¤
+	printf("ìˆ«ìžì˜ í¬ê¸°ë¹„êµ : 0 \në³„ëª¨ì–‘ ê·¸ëž˜í”„: 1 \nìˆ«ìž ë¶„ì„ :2 \nì¢…ë£Œ : ë‚˜ë¨¸ì§€ ìˆ«ìž\n");//ê²°ì •
 	scanf("%d",&define);
 	printf("**********************************************************************\n");
 	//****************************************************************************************************************************
-	//±×·¡ÇÁ º¸ÀÌ±â
+	//ê·¸ëž˜í”„ ë³´ì´ê¸°
 	if(define==1){
-	printf("Á¦¿ÜÇÒ ¹è¼öÀÇ ÁÙÀÌ ÀÖ´Ù¸é 1¹øÀ», ¾Æ´Ï¶ó¸é ³ª¸ÓÁö ¼ýÀÚ¸¦ ´­·¯ÁÖ¼¼¿ä : ");
+	printf("ì œì™¸í•  ë°°ìˆ˜ì˜ ì¤„ì´ ìžˆë‹¤ë©´ 1ë²ˆì„, ì•„ë‹ˆë¼ë©´ ë‚˜ë¨¸ì§€ ìˆ«ìžë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš” : ");
 	scanf("%d",&compare);
-	int point=compare==1?100:200;             //»ïÇ× ¿¬»êÀÚ : º¯¼ö compareÀÇ °ªÀÌ 1ÀÌ ÂüÀÌ¸é point¶ó´Â º¯¼ö¿¡ 100, °ÅÁþÀÌ¸é 200À¸·Î ÃÊ±âÈ­
-	if(point==100){printf("¸îÀÇ ¹è¼ö¸¦ Á¦¿ÜÇÒ°Ç°¡¿ä? : ");//if Á¶°Ç¹® ÀÌ¿ë
+	int point=compare==1?100:200;             //ì‚¼í•­ ì—°ì‚°ìž : ë³€ìˆ˜ compareì˜ ê°’ì´ 1ì´ ì°¸ì´ë©´ pointë¼ëŠ” ë³€ìˆ˜ì— 100, ê±°ì§“ì´ë©´ 200ìœ¼ë¡œ ì´ˆê¸°í™”
+	if(point==100){printf("ëª‡ì˜ ë°°ìˆ˜ë¥¼ ì œì™¸í• ê±´ê°€ìš”? : ");//if ì¡°ê±´ë¬¸ ì´ìš©
 	scanf("%d", &compare);
 	}
 	else{}
-	printf("º°¸ð¾ç ±×·¡ÇÁÀÔ´Ï´Ù \n");
+	printf("ë³„ëª¨ì–‘ ê·¸ëž˜í”„ìž…ë‹ˆë‹¤ \n");
 	star(result, compare, point);              //#3
 	return 0;}
 	//****************************************************************************************************************************
-	//¼ýÀÚ ÆÇº°
+	//ìˆ«ìž íŒë³„
 	else if(define==0)
-	{printf("ºñ±³ÇÒ ¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	{printf("ë¹„êµí•  ìˆ«ìžë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");
 	scanf("%d", &compare);
 	comp(compare, result);                    //#4
-	switch(comp(compare, result)){            //switch¹® : switch(n)¿¡¼­ nÀÇ °ªÀÌ case x : ¿¡¼­ x¿Í ÀÏÄ¡ÇÒ ¶§ ½ÇÇà, ÀÏÁ¾ÀÇ Á¶°Ç¹®
+	switch(comp(compare, result)){            //switchë¬¸ : switch(n)ì—ì„œ nì˜ ê°’ì´ case x : ì—ì„œ xì™€ ì¼ì¹˜í•  ë•Œ ì‹¤í–‰, ì¼ì¢…ì˜ ì¡°ê±´ë¬¸
 	case 0:
-		printf("´ë»ó°ªº¸´Ù ÀÛ½À´Ï´Ù");
-		break;                                //break : Á¶°Ç ¸¸Á·½Ã ¹Ýº¹¹® Å»Ãâ
+		printf("ëŒ€ìƒê°’ë³´ë‹¤ ìž‘ìŠµë‹ˆë‹¤");
+		break;                                //break : ì¡°ê±´ ë§Œì¡±ì‹œ ë°˜ë³µë¬¸ íƒˆì¶œ
 	case 1:
-		printf("´ë»ó°ªº¸´Ù Å®´Ï´Ù");
+		printf("ëŒ€ìƒê°’ë³´ë‹¤ í½ë‹ˆë‹¤");
 		break;
 	case 2:
-		printf("´ë»ó°ª°ú °°½À´Ï´Ù");
+		printf("ëŒ€ìƒê°’ê³¼ ê°™ìŠµë‹ˆë‹¤");
 		break;
 	case 3 :
-		printf("¼ýÀÚÀÇ ¸ðµç ºñ±³ ºÐ¼®À» Çß½À´Ï´Ù.");
+		printf("ìˆ«ìžì˜ ëª¨ë“  ë¹„êµ ë¶„ì„ì„ í–ˆìŠµë‹ˆë‹¤.");
 		break;
 	return 0;
 	}
 	}
 
 	//****************************************************************************************************************************
-	//¼ýÀÚ ºÐ¼®
+	//ìˆ«ìž ë¶„ì„
 	else if(define==2){
-		printf("¼ýÀÚ ºÐ¼®À» ½ÃÀÛÇÕ´Ï´Ù\n");
+		printf("ìˆ«ìž ë¶„ì„ì„ ì‹œìž‘í•©ë‹ˆë‹¤\n");
 		analyze(result);                     //#5
 	}
 
 	//****************************************************************************************************************************
-	//Á¾·á
+	//ì¢…ë£Œ
 	
 	else
-	{printf("Á¾·áÇÏ¼Ì½À´Ï´Ù");
-	return 0;}//³ª¸ÓÁö ¹öÆ°. Á¾·á
+	{printf("ì¢…ë£Œí•˜ì…¨ìŠµë‹ˆë‹¤");
+	return 0;}//ë‚˜ë¨¸ì§€ ë²„íŠ¼. ì¢…ë£Œ
 
 }
 
